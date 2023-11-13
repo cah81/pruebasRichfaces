@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>  
+<!--  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> --> 
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"  
+xmlns:h="http://java.sun.com/jsf/html"  
+xmlns:f="http://java.sun.com/jsf/core"  
+xmlns:ui="http://java.sun.com/jsf/facelets"  
+xmlns:a4j="http://richfaces.org/a4j"  
+xmlns:rich="http://richfaces.org/rich">  
+<f:view>  
+<h:head>  
+<title>Scrollable Data Table</title>  
+</h:head>  
+<h:body>  
+<h:form>  
+<rich:dataTable value="#{studentRecord.records}" var="student" rows="2" id="student-table">  
+<f:facet name="header">  
+<h:outputText value="Student Records" />  
+</f:facet>  
+<rich:column>  
+<f:facet name="header">Student ID</f:facet>  
+<h:outputText value="#{student.id}"/>  
+</rich:column>  
+<rich:column>  
+<f:facet name="header">Student Name</f:facet>  
+<h:outputText value="#{student.name}"/>  
+</rich:column>  
+<rich:column >  
+<f:facet name="header">Student Email</f:facet>  
+<h:outputText value="#{student.email}"/>  
+</rich:column>  
+<rich:column>  
+<f:facet name="header">Student Contact</f:facet>  
+<h:outputText value="#{student.contactNumber}"/>  
+</rich:column>  
+</rich:dataTable>  
+<rich:dataScroller for="student-table" maxPages="5">  
+<f:facet name="first">  
+<h:outputText value="First" />  
+</f:facet>  
+<f:facet name="last">  
+<h:outputText value="Last" />  
+</f:facet>  
+</rich:dataScroller>  
+</h:form>  
+</h:body>  
+</f:view>  
+</ui:composition> 

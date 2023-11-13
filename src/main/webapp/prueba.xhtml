@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+xmlns:h="http://java.sun.com/jsf/html"  
+xmlns:a4j="http://richfaces.org/a4j"  
+xmlns:rich="http://richfaces.org/rich"  
+xmlns:f="http://java.sun.com/jsf/core"  
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+ 
+	<head><title>ToolTip </title></head> 
+<body>
+   
+   
+   <ui:composition>
+     <p>prueba</p>
+   <f:view> 
+   <rich:panel>
+   	 <h:form>
+   	 	
+   	 	<a4j:commandButton id="boton" value="esto es un boton"></a4j:commandButton>
+   	 	 <rich:tooltip value="Esto eso es un boton"  target="boton" /> 
+   	 	
+   	 </h:form>
+   	  
+   	 </rich:panel>
+   	 </f:view>
+   	</ui:composition> 
+</body> 
+ 
+
+</html>
